@@ -4,6 +4,54 @@
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   $('#year').textContent = new Date().getFullYear();
 
+  /* ---------- loader: Plan → Wait → Manage → Review → Repeat ---------- */
+  let markReady;
+  const pageReady = new Promise(r => (markReady = r));
+  (function loader() {
+    const el = $('#loader');
+    if (!el) { document.body.classList.remove('loading'); document.body.classList.add('ready'); markReady(); return; }
+    const words = $$('.ld-words span', el), dotsBox = $('#ldDots');
+    dotsBox.innerHTML = '<i></i>'.repeat(28);
+    const dots = $$('i', dotsBox);
+    const STEP = reduce ? 120 : 460;                 // time each word stays on screen
+    const SEQ = STEP * words.length;                  // full word sequence
+    const t0 = performance.now();
+    let loaded = document.readyState === 'complete', wordIdx = -1, done = false;
+    if (!loaded) addEventListener('load', () => (loaded = true), { once: true });
+
+    const showWord = i => words.forEach((w, j) => {
+      w.classList.toggle('on', j === i);
+      w.classList.toggle('off', j < i);
+    });
+
+    function finish() {
+      if (done) return; done = true;
+      dots.forEach(d => d.classList.add('on'));
+      setTimeout(() => {
+        el.classList.add('exit');
+        document.body.classList.remove('loading');
+        document.body.classList.add('ready');
+        markReady();
+        setTimeout(() => { el.classList.add('gone'); el.setAttribute('aria-hidden', 'true'); }, reduce ? 350 : 1300);
+      }, reduce ? 50 : 380);
+    }
+
+    function tick(now) {
+      if (done) return;
+      const t = now - t0;
+      const i = Math.min(words.length - 1, Math.floor(t / STEP));
+      if (i !== wordIdx) { wordIdx = i; showWord(i); }
+      // dots follow the word sequence, but hold the last few until the page has loaded
+      const cap = loaded ? 28 : 24;
+      const n = Math.min(cap, Math.floor((t / SEQ) * 28));
+      dots.forEach((d, k) => d.classList.toggle('on', k < n));
+      if (loaded && t >= SEQ) return finish();
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+    setTimeout(finish, 7000);                         // safety net on very slow connections
+  })();
+
   /* ---------- nav: hide on scroll down, progress bar, active link ---------- */
   const nav = $('#nav'), prog = $('#progress'), totop = $('#totop');
   let lastY = 0;
@@ -74,10 +122,10 @@
     const ma = $('#ma'), L = ma.getTotalLength();
     ma.style.strokeDasharray = L; ma.style.strokeDashoffset = L;
     ma.style.transition = 'stroke-dashoffset 2s cubic-bezier(.2,.8,.2,1) .9s';
-    requestAnimationFrame(() => requestAnimationFrame(() => {
+    pageReady.then(() => setTimeout(() => {
       $$('.cd', svg).forEach(el => { el.style.opacity = 1; el.style.transform = 'none'; });
       ma.style.strokeDashoffset = 0;
-    }));
+    }, 250));
   })();
 
   /* ---------- routine: vertical scroll -> horizontal move ---------- */

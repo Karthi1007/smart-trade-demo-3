@@ -10,8 +10,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<noscript><style>.loader{display:none}body.loading{overflow:auto}</style></noscript>
 </head>
-<body>
+<body class="loading">
+
+<!-- ============ LOADER ============ -->
+<div class="loader" id="loader" role="status" aria-live="polite" aria-label="Loading Smart Trade">
+  <div class="ld-panels" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="ld-content">
+    <span class="ld-kicker">Smart Trade · The daily routine</span>
+    <div class="ld-words" aria-hidden="true">
+      <span>Plan.</span><span>Wait.</span><span>Manage.</span><span>Review.</span><span><em>Repeat.</em></span>
+    </div>
+    <div class="ld-dots" id="ldDots" aria-hidden="true"></div>
+    <span class="ld-foot">Train here to be consistent</span>
+  </div>
+</div>
 
 <div class="progress" id="progress"></div>
 
