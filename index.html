@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#F3EEE3">
+<meta name="description" content="Smart Trade — Train here to be consistent. Build a calm, repeatable trading process.">
+<title>Smart Trade — The Consistency Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a href="#home" class="logo" aria-label="Smart Trade home"><img src="assets/smart-trade-logo.png" alt="Smart Trade — Train here to be consistent"></a>
+  <nav aria-label="Main">
+    <ul>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#routine">Routine</a></li>
+      <li><a href="#learn">Learn</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <a href="#contact" class="btn">Start training <span class="arr" aria-hidden="true">→</span></a>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="#home"><small>01</small>Home</a>
+  <a href="#about"><small>02</small>About</a>
+  <a href="#routine"><small>03</small>Routine</a>
+  <a href="#learn"><small>04</small>Learn</a>
+  <a href="#tools"><small>05</small>Tools</a>
+  <a href="#contact"><small>06</small>Contact</a>
+  <p>Smart Trade · Train here to be consistent</p>
+</div>
+
+<main>
+<!-- ============ HERO (bento) ============ -->
+<section class="hero" id="home">
+  <div class="wrap bento">
+    <div class="tile t-head">
+      <span class="label">The Smart Trade journal</span>
+      <h1>
+        <span class="line"><span>Train here</span></span>
+        <span class="line"><span>to be</span></span>
+        <span class="line"><span><em>consistent.</em></span></span>
+      </h1>
+      <div class="foot">
+        <p>Don’t try to move the market. Move with the money that moves it — with a calm, repeatable process you can trust.</p>
+        <div class="ctas">
+          <a href="#routine" class="btn">See the routine <span class="arr" aria-hidden="true">↓</span></a>
+          <a href="#tools" class="btn ghost">Try the tools</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="tile t-chart" aria-label="Illustrative candlestick chart">
+      <div class="top"><span class="pill"><i></i>Illustrative</span><span>Process &gt; prediction</span></div>
+      <svg id="heroChart" viewBox="0 0 320 180" preserveAspectRatio="none" aria-hidden="true"></svg>
+      <p class="cap">Small, steady steps <em>compound.</em></p>
+    </div>
+
+    <div class="tile t-badge">
+      <div class="badge" aria-label="Discipline, Strategy, Consistency">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+          <text><textPath href="#circ" textLength="486" lengthAdjust="spacing">DISCIPLINE · STRATEGY · CONSISTENCY ·</textPath></text>
+        </svg>
+        <div class="core">st.</div>
+      </div>
+    </div>
+
+    <div class="tile t-quote">
+      <q>Read the market. Respect the move.</q>
+      <span>Mindset · 01</span>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>Plan before action</span><span>Wait for your setup</span><span>Manage your risk</span><span>Review every trade</span><span>Stay disciplined</span>
+      <span>Plan before action</span><span>Wait for your setup</span><span>Manage your risk</span><span>Review every trade</span><span>Stay disciplined</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rv">
+        <span class="label">About Smart Trade</span>
+        <h2 class="h2">Consistency is <em>trained,</em> not found.</h2>
+      </div>
+      <p class="lead rv d1">Smart Trade is built around one simple idea. The market moves every day; a clear process, patience and disciplined decisions help you respond with a plan instead of emotion.</p>
+    </div>
+    <div class="intro-grid">
+      <article class="stat rv">
+        <div class="big">4<sup>steps</sup></div>
+        <div><h3>One repeatable routine</h3><p>Plan, wait, manage, review. The same four steps, every single session.</p></div>
+      </article>
+      <article class="stat rv d1">
+        <div class="big">6<sup>topics</sup></div>
+        <div><h3>Structured learning</h3><p>From market basics to trading psychology, explored one layer at a time.</p></div>
+      </article>
+      <article class="stat rv d2">
+        <div class="big">1<sup>habit</sup></div>
+        <div><h3>Show up daily</h3><p>Progress comes from small sessions repeated — not from a single big trade.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROUTINE (horizontal) ============ -->
+<section class="routine" id="routine">
+  <div class="sticky">
+    <div class="wrap r-head">
+      <div>
+        <span class="label">The trading routine</span>
+        <h2 class="h2" style="margin-top:16px">Four steps. <em>Every</em> trade.</h2>
+      </div>
+      <div class="r-count"><b id="rNow">01</b> / 04</div>
+    </div>
+    <div class="r-track" id="rTrack">
+      <article class="r-card">
+        <div class="ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
+        <span class="n">01</span>
+        <div><h3>Plan before action</h3><p>Map important levels, define your scenarios and know what would invalidate the idea — before you click anything.</p></div>
+      </article>
+      <article class="r-card">
+        <div class="ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg></div>
+        <span class="n">02</span>
+        <div><h3>Wait for your setup</h3><p>Let price come to your plan. Choosing not to trade is also a valid, disciplined decision.</p></div>
+      </article>
+      <article class="r-card">
+        <div class="ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <span class="n">03</span>
+        <div><h3>Manage your risk</h3><p>Size positions sensibly, set your stop-loss and protect your capital first. Survival makes consistency possible.</p></div>
+      </article>
+      <article class="r-card">
+        <div class="ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></svg></div>
+        <span class="n">04</span>
+        <div><h3>Review every trade</h3><p>Record what happened, learn without emotion and refine the process for tomorrow’s session.</p></div>
+      </article>
+      <article class="r-card end">
+        <h3>Then <em>repeat.</em><br>That’s the whole secret.</h3>
+        <a href="#learn" class="btn light">Start learning <span class="arr" aria-hidden="true">→</span></a>
+      </article>
+    </div>
+    <div class="wrap r-bar"><i id="rBar"></i></div>
+  </div>
+</section>
+
+<!-- ============ LEARN ============ -->
+<section class="sec" id="learn">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rv">
+        <span class="label">Market learning</span>
+        <h2 class="h2">Learn the market, <em>layer</em> by layer.</h2>
+      </div>
+      <p class="lead rv d1">Pick a topic to explore the key areas that build a more structured understanding of trading.</p>
+    </div>
+    <div class="learn-box rv">
+      <div class="tabs" role="tablist" aria-label="Learning topics" id="tabs"></div>
+      <div class="panel" id="panel" role="tabpanel" aria-live="polite">
+        <div class="txt">
+          <span class="kick" id="pKick"></span>
+          <h3 id="pTitle"></h3>
+          <p id="pText" style="color:var(--ink-2)"></p>
+          <ul id="pList"></ul>
+        </div>
+        <div class="art" id="pArt"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOLS ============ -->
+<section class="sec tools" id="tools">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rv">
+        <span class="label">Practice tools</span>
+        <h2 class="h2">Make discipline <em>visible.</em></h2>
+      </div>
+      <p class="lead rv d1">Two small tools to support the routine: a 28-day consistency tracker, and a position-size calculator that puts risk first.</p>
+    </div>
+    <div class="tools-grid">
+      <div class="tool rv">
+        <span class="label">28-day challenge</span>
+        <h3>Consistency tracker</h3>
+        <p>Tap a day each time you follow your full routine. Your progress is saved in this browser.</p>
+        <div class="days" id="days" role="group" aria-label="28 day tracker"></div>
+        <div class="track-stats">
+          <div><b id="sDone">0</b><span>Days done</span></div>
+          <div><b id="sStreak">0</b><span>Best streak</span></div>
+          <div><b id="sPct">0%</b><span>Consistency</span></div>
+        </div>
+        <div class="track-foot">
+          <span class="track-msg" id="tMsg">Every streak starts with day one.</span>
+          <button class="linkbtn" id="tReset" type="button">Reset tracker</button>
+        </div>
+      </div>
+
+      <div class="tool calc rv d1">
+        <span class="label">Risk first</span>
+        <h3>Position size calculator</h3>
+        <p>Decide how much you’re willing to lose before you decide how much to buy.</p>
+        <div class="field">
+          <label for="cCap">Trading capital (₹)</label>
+          <input type="number" id="cCap" value="200000" min="0" step="1000" inputmode="decimal">
+        </div>
+        <div class="field">
+          <label for="cRisk">Risk per trade <output id="cRiskOut">1.0%</output></label>
+          <input type="range" id="cRisk" min="0.25" max="5" step="0.25" value="1">
+        </div>
+        <div class="two">
+          <div class="field"><label for="cEntry">Entry price (₹)</label><input type="number" id="cEntry" value="1250" min="0" step="0.05" inputmode="decimal"></div>
+          <div class="field"><label for="cStop">Stop-loss (₹)</label><input type="number" id="cStop" value="1225" min="0" step="0.05" inputmode="decimal"></div>
+        </div>
+        <div class="result" aria-live="polite">
+          <div><span>Max risk</span><b id="rRisk">—</b></div>
+          <div><span>Quantity</span><b id="rQty">—</b></div>
+          <div><span>Risk per share</span><b id="rPer">—</b></div>
+          <div><span>Position value</span><b id="rVal">—</b></div>
+          <div class="warn" id="rWarn"></div>
+        </div>
+        <p class="note">For learning purposes only. Not investment advice.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRINCIPLES (stack) ============ -->
+<section class="sec" id="principles">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rv">
+        <span class="label">Core principles</span>
+        <h2 class="h2">What we <em>train</em> for.</h2>
+      </div>
+      <p class="lead rv d1">Four principles sit under every lesson and every routine at Smart Trade.</p>
+    </div>
+    <div class="stack">
+      <article class="s-card" style="--i:0">
+        <span class="num">i.</span>
+        <div><h3>Market awareness</h3><p>Build an understanding of price movement and changing market conditions before forming an opinion.</p></div>
+        <svg class="glyph" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="50" cy="50" r="44"/><circle cx="50" cy="50" r="28"/><circle cx="50" cy="50" r="10" fill="currentColor"/></svg>
+      </article>
+      <article class="s-card" style="--i:1">
+        <span class="num">ii.</span>
+        <div><h3>Consistency</h3><p>Create repeatable habits and follow a considered trading routine — session after session.</p></div>
+        <svg class="glyph" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 80 L30 60 L48 68 L70 38 L94 22"/><path d="M78 22h16v16"/><path d="M6 94h88" opacity=".4"/></svg>
+      </article>
+      <article class="s-card" style="--i:2">
+        <span class="num">iii.</span>
+        <div><h3>Discipline</h3><p>Practice patience, preparation and emotional control in every decision you make.</p></div>
+        <svg class="glyph" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="10" y="10" width="80" height="80" rx="18"/><path d="M30 50l14 14 26-28"/></svg>
+      </article>
+      <article class="s-card" style="--i:3">
+        <span class="num">iv.</span>
+        <div><h3>Risk awareness</h3><p>Make risk part of the process, not an afterthought. Protect capital first; opportunity comes again.</p></div>
+        <svg class="glyph" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M50 6l38 16v26c0 24-17 40-38 46C29 88 12 72 12 48V22z"/><path d="M50 30v24M50 66v4"/></svg>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATEMENT ============ -->
+<section class="statement" id="statement">
+  <div class="wrap">
+    <span class="label">The Smart Trade mindset</span>
+    <p class="big" id="stmt">Don’t try to move the market. Move with the *money* that *moves* it.</p>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div class="c-info rv">
+      <span class="label">Contact</span>
+      <h2>Ready to trade with <em>clarity?</em></h2>
+      <dl>
+        <div><dt>Our promise</dt><dd>Train here to be consistent.</dd></div>
+        <div><dt>Our message</dt><dd>Move with the money that moves the market.</dd></div>
+      </dl>
+      <img class="bull" src="assets/smart-trade-bull.png" alt="" style="filter:brightness(0) invert(1)">
+    </div>
+
+    <form class="c-form rv d1" id="cForm" novalidate>
+      <div>
+        <span class="label" style="margin-bottom:14px">I’m interested in</span>
+        <div class="chips" id="chips" style="margin-top:14px">
+          <button type="button" class="chip" aria-pressed="true">Market basics</button>
+          <button type="button" class="chip" aria-pressed="false">Chart reading</button>
+          <button type="button" class="chip" aria-pressed="false">Risk management</button>
+          <button type="button" class="chip" aria-pressed="false">Psychology</button>
+        </div>
+      </div>
+      <div class="f"><input id="fName" name="name" type="text" placeholder=" " autocomplete="name" required><label for="fName">Your name</label><div class="msg"></div></div>
+      <div class="f"><input id="fEmail" name="email" type="email" placeholder=" " autocomplete="email" required><label for="fEmail">Email address</label><div class="msg"></div></div>
+      <div class="f"><textarea id="fMsg" name="message" placeholder=" " required></textarea><label for="fMsg">How can Smart Trade help you?</label><div class="msg"></div></div>
+      <div class="form-row">
+        <small>Demo form — no message is actually sent.</small>
+        <button class="btn" type="submit">Send message <span class="arr" aria-hidden="true">→</span></button>
+      </div>
+      <div class="form-ok" id="formOk" role="status"></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div>
+        <a href="#home" class="logo"><img src="assets/smart-trade-logo.png" alt="Smart Trade"></a>
+        <p>A calm, structured place to learn the market and build disciplined trading habits.</p>
+      </div>
+      <div class="f-links">
+        <div><h4>Explore</h4><a href="#about">About</a><a href="#routine">Routine</a><a href="#learn">Learn</a></div>
+        <div><h4>Practice</h4><a href="#tools">Tracker</a><a href="#tools">Calculator</a><a href="#principles">Principles</a></div>
+        <div><h4>Connect</h4><a href="#contact">Contact</a><a href="#home">Back to top</a></div>
+      </div>
+    </div>
+    <div class="wordmark" aria-hidden="true">Smart <em>Trade</em></div>
+    <div class="f-bottom">
+      <span>© <span id="year"></span> Smart Trade. All rights reserved.</span>
+      <span>Educational content only · Not investment advice</span>
+    </div>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<script src="script.js"></script>
+</body>
+</html>
